@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Momohamed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="up">
+        <img src="logo.png" alt="Mohamed logo" class="mohamedlogo" >
+        <nav class="navigation" >
+            <ul>
+
+                <li><a href="#aboutme">نبذه عنى </a></li>
+                <li><a href="#contact me">اتصل بي </a></li>
+                <li><a href="#hero">الصفحه الرئيسيه</a></li>
+
+
+
+
+
+            </ul>
+
+        </nav>
+
+
+
+    </header>
+    <hr  class="crazy-divider"/>
+
+    <section class="hero" id="hero">
+        <img class="arrow" src="arrow.svg" alt="arrow">
+        <div class="herosup">
+            <h1 class="name">انا محمد</h1>
+            <h1 class="title">مأذون شرعى</h1>
+
+         
+     <div class="heroBtns">
+          <a class="hireMe" href="#contact me">تواصل معى</a>
+     </div>
+
+            
+        </div>
+        <div >
+            <img src="Hero.PNG" alt="Profile" class="profile-pic">  
+  
+
+        </div>
+   
+
+    </section>
+<hr class="crazy-divider">
+
+
+    <section class="aboutme" id="aboutme">
+
+        <img src="AboutMe.svg" alt="Aboutme image" class="aboutmeimg">
+
+        <div class="textcontainer">
+            <div class="textTitle">
+                <h1 class="aboutname">عنى</h1>
+                <h1 class="aboutTitle">نبذه</h1>
+                <img src="lightbulb.svg" alt="lihg" class="light">
+            </div>
+            <p class="aboutmePar">
+مرحباً،انا اسمي محمد جعفر. أعمل مأذوناً شرعياً منذ حوالى 10 سنين . اعمل   معلماً للقرآن الكريم منذ ٢٠ عاماً<br>. لديّ خبرة واسعة في تعليم القرآن الكريم. عملت كمعلم في العديد من الجهات، والآن أملك داراً خاصة لتعليم القرآن الكريم 
+واعمل كمدرس لغه عربيه للمراحل الاعداديه والثانويه اعمل مدرس لغه عربيه منذ حوالى 15 سنه
+ ولدى خبره كبيره فى تدريس المناهج العربيه الى القاء
+ I teach the Quran.
+            </p>
+
+
+        </div>
+
+
+
+    </section>
+
+  
+<hr class="crazy-divider">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contactcontainer" id="contact me">
+
+
+
+
+
+<div class="ContactTitle"> 
+<h1 class="aboutname">تواصل </h1>
+<h1 class="aboutTitle">معى</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="Contact">
+<div class="emailandphone">
+
+
+</div>
+<div class="emailandphone">
+<img src="phone.svg" alt="phone logo">
+<h3>01113383939</h3>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer id="footer">
+<a href="#up" class="scrooll_up"><i class="fa-solid fa-arrow-up"></i></a>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<form id="myForm">
+  <h2>إملأ البيانات لإرسالها على واتساب</h2>
+
+  <label for="name">الاسم:</label>
+  <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
+
+  <label for="phone">رقم التليفون:</label>
+  <input type="text" id="phone" name="phone" placeholder="اكتب رقمك" required>
+
+  <label for="service">اختر الخدمة:</label>
+  <select id="service" name="service" required>
+    <option value="">--اختر الخدمة--</option>
+    <option value="جواز">جواز</option>
+    <option value="طلاق">طلاق</option>
+    <option value="رد يمين">رد يمين</option>
+    <option value="تصادق">تصادق</option>
+    <option value="قرآن كريم">قرآن كريم</option>
+    <option value="درس لغة عربية">درس لغة عربية</option>
+    <option value="غير ذلك">غير ذلك</option>
+  </select>
+
+  <button type="submit">إرسال على واتساب</button>
+</form>
+
+
+
+
+
+</section>
+<hr>
+<footer>
+    <p>Built by Anas.</p>
+</footer>
+
+
+
+
+
+
+
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("myForm");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = form.querySelector("input[name='name']").value.trim();
+    const phone = form.querySelector("input[name='phone']").value.trim();
+    const service = form.querySelector("select[name='service']").value;
+
+    if (!name || !phone || !service) {
+      alert("من فضلك املأ كل الخانات قبل الإرسال!");
+      return;
+    }
+
+    let message = "📨 بيانات الفورم:\n";
+    message += "👤 الاسم: " + name + "\n";
+    message += "📞 رقم التليفون: " + phone + "\n";
+    message += "🛎 الخدمة المطلوبة: " + service;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "201113383939";
+    const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
+
+    window.open(whatsappURL, "_blank");
+  });
+});
+
+</script>
+
+
+
+
+
+</html>
